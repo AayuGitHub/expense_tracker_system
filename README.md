@@ -1,0 +1,1 @@
+A command-line application to keep track of daily expenses

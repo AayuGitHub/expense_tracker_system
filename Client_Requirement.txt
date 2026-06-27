@@ -1,0 +1,187 @@
+A client wants a simple command-line application to keep track of daily expenses.
+
+The application should help them record expenses, organize them by category, update mistakes, delete expenses, search expenses, and generate useful reports.
+
+The application should save all data, so when the program is restarted, nothing is lost.
+
+Functional Requirements:
+
+Main Menu:
+
+============================
+ Expense Tracker
+============================
+
+1. Add Expense
+2. View All Expenses
+3. Search Expense
+4. Update Expense
+5. Delete Expense
+6. Monthly Summary
+7. Category Report
+8. Exit
+
+Expense Information
+
+Each expense should contain:
+
+- Expense ID
+- Title
+- Amount
+- Category
+- Date
+
+Example:
+
+ID: e1023
+
+Title: Pizza
+
+Amount: 450
+
+Category: Food
+
+Date: 27-06-2026
+
+
+Feature - 1: Add Expense
+
+User enters:
+
+Title
+
+↓
+
+Amount
+
+↓
+
+Category
+
+↓
+
+Date
+
+Store the expense.
+
+
+Feature 2 - View Expenses
+
+Display all expenses neatly.
+
+Example: 
+
+------------------------------------
+ID : ...
+
+Title : Pizza
+
+Amount : ₹450
+
+Category : Food
+
+Date : 27-06-2026
+------------------------------------
+
+Feature 3 — Search Expense
+
+Allow searching by title.
+
+Example:
+
+Search:
+
+Pizza
+
+If found:
+
+Display complete information.
+
+
+Feature 4 — Update Expense
+
+User should be able to update:
+
+Title
+Amount
+Category
+Date
+
+Blank input should skip that field.
+
+
+Feature 5 — Delete Expense
+
+Delete using Expense ID.
+
+Ask for confirmation before deleting.
+
+Example:
+
+Delete expense?
+
+Y/N
+
+
+Feature 6 — Monthly Summary
+
+Show:
+
+Total Expenses
+
+Number of Expenses
+
+Highest Expense
+
+Lowest Expense
+
+Average Expense
+
+
+Feature 7 — Category Report
+
+Example:
+
+Food
+
+₹2500
+
+Travel
+
+₹3200
+
+Shopping
+
+₹1800
+
+Bills
+
+₹5000
+
+
+This requires grouping expenses by category and calculating totals.
+
+
+Feature 8 — Save Data
+
+Save everything into a JSON file.
+
+Load automatically when the application starts.
+
+
+Validation Rules
+Title cannot be empty.
+Amount must be greater than 0.
+Category cannot be empty.
+Date must be valid (you may initially accept any non-empty string and improve validation later).
+
+Deliverables
+
+By the end of this project, you should have:
+
+A working command-line Expense Tracker
+Clean object-oriented code
+JSON persistence
+Monthly analytics
+Category-wise reports
+A modular structure that's easy to extend
