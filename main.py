@@ -30,7 +30,7 @@ while True:
         while True:
             try:
                 expense_amount = int(input("\nEnter the amount of expense: "))
-                if expense_amount < 0:
+                if expense_amount <= 0:
                     expense_amount = int(input("\nExpense Amount can't be less than 0, please enter the amount of expense: "))
                 break
             except ValueError as e:
@@ -153,12 +153,15 @@ while True:
             month = input("\n Month can't be empty, please enter the month for which you want to see summary of expenses: ").strip()
 
         while True:
-            month_input = int(month)
+            try:
+                month_input = int(month)
 
-            if month_input < 1 and month_input > 12:
-                month_input = int(input("\nMonth must be between 1-12; please add correct month number: "))
-            break
-
+                if month_input < 1 or month_input > 12:
+                    month_input = int(input("\nMonth must be between 1-12; please add correct month number: "))
+                    continue
+                break
+            except ValueError:
+                month = input("\nInvalid input! Please enter a valid number for the month (1-12): ").strip()  
         year = None
 
         year = input("\n Enter the year for which you want to see summary of expenses: ").strip()
